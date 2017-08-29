@@ -25,6 +25,5 @@
                                              "${it.selectedValue}", "${it.defaultValue}");
             </script>
         </div>
-        <div>${%needs.to.clone}</div>
     </f:entry>
 </j:jelly>

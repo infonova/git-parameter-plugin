@@ -13,7 +13,7 @@
 	<version>0.9.5</version>
 	<packaging>hpi</packaging>
 	<name>Git Parameter Plug-In</name>
-	<description>Assign git tag or revision number as parameter in Parametrized builds</description>
+	<description>Assign git tags or branches as parameter in Parametrized builds</description>
 	<url>http://wiki.jenkins-ci.org/display/JENKINS/Git+Parameter+Plugin</url>
 
 	<licenses>
