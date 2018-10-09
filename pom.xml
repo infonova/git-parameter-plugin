@@ -10,7 +10,7 @@
 
 	<groupId>org.jenkins-ci.tools</groupId>
 	<artifactId>git-parameter</artifactId>
-	<version>0.9.5</version>
+	<version>0.9.5-INFONOVA-1-SNAPSHOT</version>
 	<packaging>hpi</packaging>
 	<name>Git Parameter Plug-In</name>
 	<description>Assign git tags or branches as parameter in Parametrized builds</description>
@@ -112,12 +112,35 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<scm>
-		<connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
-		<developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-		<url>http://github.com/jenkinsci/${project.artifactId}-plugin</url>
-	  <tag>git-parameter-0.9.5</tag>
-  </scm>
+		<connection>scm:git:https://github.com/infonova/${project.artifactId}-plugin.git</connection>
+		<developerConnection>scm:git:https://github.com/infonova/${project.artifactId}-plugin.git</developerConnection>
+		<url>https://github.com/infonova/${project.artifactId}-plugin.git</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-infonova</id>
+			<name>Nexus at Infonova</name>
+			<url>dav:http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-infonova</id>
+			<name>Nexus at Infonova</name>
+			<url>dav:http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-snapshots/</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>3.0.0</version>
+			</extension>
+		</extensions>
+	</build>
 
 </project>
